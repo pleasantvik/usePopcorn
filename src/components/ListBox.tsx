@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { ITempMovieData } from '@/models/ITempMovieData'
 import { ReactNode } from 'react'
 
 type Props = {
