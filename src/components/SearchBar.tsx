@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-const SearchBar = () => {
-  const [query, setQuery] = useState('')
+type Props = {
+  setQuery: any
+  query: string
+}
+const SearchBar = ({ setQuery, query }: Props) => {
+  // const [query, setQuery] = useState('')
 
   return (
     <input

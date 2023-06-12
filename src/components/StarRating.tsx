@@ -10,13 +10,24 @@ type Props = {
   maxRating?: number
   color?: string
   size?: number
+  onSetRating: (rating: number) => void
 }
-const StarRating = ({ maxRating = 5, color = '#fcc419', size = 48 }: Props) => {
+const StarRating = ({
+  maxRating = 5,
+  color = '#fcc419',
+  size = 48,
+  onSetRating,
+}: Props) => {
   const [rating, setRating] = useState<number>(0)
   const [tempRating, setTempRating] = useState<number>(0)
 
+  // const onUserRate =()=>{
+  //   setUserRating()
+  // }
+
   const handleRating = (rating: number) => {
     setRating(rating)
+    onSetRating(rating)
   }
 
   const handleHover = (rating: number) => {

@@ -4,12 +4,17 @@ import { ITempWatchData } from '@/models/ITempMovieData'
 
 type Props = {
   watched: ITempWatchData[]
+  onDeleteWatched: (id: string) => void
 }
-const WatchedMovie = ({ watched }: Props) => {
+const WatchedMovie = ({ watched, onDeleteWatched }: Props) => {
   return (
     <ul className='list'>
       {watched.map((movie) => (
-        <Watched key={movie.Title} movie={movie} />
+        <Watched
+          key={movie.Title}
+          movie={movie}
+          onDeleteWatched={onDeleteWatched}
+        />
       ))}
     </ul>
   )

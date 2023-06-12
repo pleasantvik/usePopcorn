@@ -3,10 +3,11 @@ import React from 'react'
 
 type Props = {
   movie: ITempMovieData
+  onSelectMovie: (id: string) => void
 }
-const Movie = ({ movie }: Props) => {
+const Movie = ({ movie, onSelectMovie }: Props) => {
   return (
-    <li key={movie.imdbID}>
+    <li key={movie.imdbID} onClick={() => onSelectMovie(movie.imdbID)}>
       <img src={movie.Poster} alt={`${movie.Title} poster`} />
       <h3>{movie.Title}</h3>
       <div>

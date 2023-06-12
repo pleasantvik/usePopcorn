@@ -3,6 +3,7 @@ export interface ITempMovieData {
   Title: string
   Year: string
   Poster: string
+  Type?: string
 }
 
 export interface ITempWatchData extends ITempMovieData {
