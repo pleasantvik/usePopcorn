@@ -42,9 +42,7 @@ export default function App() {
     try {
       setIsLoading(true)
       const data = await axios.get(
-        `http://www.omdbapi.com/?apikey=${
-          process.env.NODE_ENV === 'development' ? process.env.API_KEY : ''
-        }&s=${query}`,
+        `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
         {
           // signal: controller.signal,
         }
